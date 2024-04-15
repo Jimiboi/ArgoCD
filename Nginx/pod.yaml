@@ -33,14 +33,15 @@ metadata:
   labels:
     app: app-test-1
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - name:  http
     port:  80
-    targetPort: 80
+    targetPort: 30080
     protocol: TCP
   selector:
     app: app-test-1
+<<<<<<< HEAD
 ---
 apiVersion: v1
 kind: Service
@@ -58,3 +59,5 @@ spec:
     targetPort: nginx-http
   selector:
     app: app-test-1
+=======
+>>>>>>> 573ed68 (Changing type of Service)
