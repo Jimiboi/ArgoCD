@@ -33,7 +33,9 @@ metadata:
   labels:
     app: app-test-1
 spec:
-  type: NodePort
+  type: LoadBalancer
+  externalIPs:
+  - 192.168.0.14
   ports:
   - name:  http
     port:  80
