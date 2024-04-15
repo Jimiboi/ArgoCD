@@ -41,23 +41,3 @@ spec:
     protocol: TCP
   selector:
     app: app-test-1
-<<<<<<< HEAD
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: app-test-1
-  namespace: app-test-1
-  labels:
-    app: app-test-1
-spec:
-  type: LoadBalancer
-  ports:
-  - name:  http
-    port:  80
-    nodePort: 30080
-    targetPort: nginx-http
-  selector:
-    app: app-test-1
-=======
->>>>>>> 573ed68 (Changing type of Service)
