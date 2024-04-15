@@ -49,8 +49,8 @@ kind: ServiceMonitor
 metadata:
   labels:
     serviceMonitorSelector: prometheus
-  name: prometheus
-  namespace: prometheus
+  name: app-test-1-prometheus
+  namespace: app-test-1
 spec:
   endpoints:
   - interval: 30s
