@@ -47,7 +47,7 @@ kind: ServiceMonitor
 metadata:
   labels:
     serviceMonitorSelector: prometheus
-  name: prometheus
+  name: prometheus-nginx
   namespace: prometheus
 spec:
   endpoints:
