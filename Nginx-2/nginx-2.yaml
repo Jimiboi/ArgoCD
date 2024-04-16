@@ -41,22 +41,3 @@ spec:
     protocol: TCP
   selector:
     app: app-test-2
----
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  labels:
-    serviceMonitorSelector: prometheus
-  name: prometheus-nginx-2
-  namespace: prometheus
-spec:
-  endpoints:
-  - interval: 30s
-    targetPort: 9090
-    path: /metrics
-  namespaceSelector:
-    matchNames:
-    - prometheus
-  selector:
-    matchLabels:
-      operated-prometheus: "true"
